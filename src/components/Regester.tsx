@@ -39,7 +39,7 @@ const Regester = () => {
         <input
           placeholder="Your Email"
           {...register("email", { required: true, minLength: 5 })}
-          className="w-full border border-gray-300 shadow-lg focus:border-indigo-600 focus:outline-none focus:ring-1 focus:ring-indigo-600 rounded-lg px-3 py-3 text-md bg-transparent"
+          className="w-full border border-gray-300 shadow-lg focus:border-indigo-600 focus:outline-none focus:ring-1 focus:ring-indigo-600 rounded-lg px-3 py-3 text-md bg-transparent xl:w-lg "
         />
         {errors?.email && (
           <p className="text-red-500">{errors.email.message}</p>
