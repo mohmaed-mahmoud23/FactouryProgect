@@ -8,6 +8,7 @@ import ErrorHandler from "../components/ErrorComponant";
 import Home from "../Pages/Home";
 import Layout from "../Pages/Layout";
 import Logen from "../components/Logen";
+import DacvhBord from "../components/DacvhBord";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -15,8 +16,9 @@ const router = createBrowserRouter(
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
 
-      <Route path="/regestr" element={<Regester />} />
-      <Route path="/Logen" element={<Logen/>} />
+        <Route path="/regestr" element={<Regester />} />
+        <Route path="/Logen" element={<Logen />} />
+        <Route path="/DachBord" element={<DacvhBord/>} />
       </Route>
       <Route path="*" element={<ErrorHandler />} />
     </>
