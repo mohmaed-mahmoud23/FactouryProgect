@@ -1,18 +1,21 @@
 const DacvhBord = () => {
   const users = [
     {
+        id: 1,
       firstName: "Ahmed",
       email: "ahmed@example.com",
       password: "123456",
       userType: "تاجر",
     },
     {
+        id: 2,
       firstName: "Sara",
       email: "sara@example.com",
       password: "abcdef",
       userType: "عميل",
     },
     {
+        id: 3,
       firstName: "Mohamed",
       email: "mohamed@example.com",
       password: "pass1234",
@@ -37,6 +40,7 @@ const DacvhBord = () => {
             <tbody>
               {users.map((user, index) => (
                 <tr key={index} className="border-b hover:bg-gray-50">
+                  <td className="py-3 px-4">{user.id}</td>
                   <td className="py-3 px-4">{user.firstName}</td>
                   <td className="py-3 px-4">{user.email}</td>
                   <td className="py-3 px-4">{user.userType}</td> {/* جديد */}
