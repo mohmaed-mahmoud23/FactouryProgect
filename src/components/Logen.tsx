@@ -6,7 +6,6 @@ import { yupResolver } from "@hookform/resolvers/yup";
 interface IFormInput {
   email: string;
   password: string;
-  userType: "عميل" | "تاجر" | "صاحب مصنع";
 }
 
 const Logen = () => {
@@ -53,48 +52,8 @@ const Logen = () => {
         )}
       </div>
 
-      {/* User Type */}
-      <div className="flex flex-col gap-2">
-        <label className="text-gray-700 font-medium">اختر نوع المستخدم:</label>
-        <div className="flex flex-col sm:flex-row gap-4">
-          <label className="flex items-center gap-2">
-            <input
-              type="radio"
-              value="عميل"
-              {...register("userType", {
-                required: "من فضلك اختر نوع المستخدم",
-              })}
-            />
-            عميل
-          </label>
-          <label className="flex items-center gap-2">
-            <input
-              type="radio"
-              value="تاجر"
-              {...register("userType", {
-                required: "من فضلك اختر نوع المستخدم",
-              })}
-            />
-            تاجر
-          </label>
-          <label className="flex items-center gap-2">
-            <input
-              type="radio"
-              value="صاحب مصنع"
-              {...register("userType", {
-                required: "من فضلك اختر نوع المستخدم",
-              })}
-            />
-            صاحب مصنع
-          </label>
-        </div>
-        {errors.userType && (
-          <p className="text-red-500">{errors.userType.message}</p>
-        )}
-      </div>
-
       {/* Submit */}
-      <button
+      <button 
         type="submit"
         className="w-full border-2 px-2 py-2 border-indigo-400 hover:text-white bg-transparent text-black hover:border-transparent hover:bg-gray-800 dark:text-gray-800 dark:hover:text-white"
       >

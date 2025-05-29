@@ -1,21 +1,21 @@
 const DacvhBord = () => {
   const users = [
     {
-        id: 1,
+      id: 1,
       firstName: "Ahmed",
       email: "ahmed@example.com",
       password: "123456",
       userType: "تاجر",
     },
     {
-        id: 2,
+      id: 2,
       firstName: "Sara",
       email: "sara@example.com",
       password: "abcdef",
       userType: "عميل",
     },
     {
-        id: 3,
+      id: 3,
       firstName: "Mohamed",
       email: "mohamed@example.com",
       password: "pass1234",
@@ -32,6 +32,7 @@ const DacvhBord = () => {
           <table className="min-w-full bg-white rounded-xl shadow-md">
             <thead>
               <tr className="bg-gray-200 text-gray-700 text-left">
+                <th className="py-3 px-4"> Id</th>
                 <th className="py-3 px-4">First Name</th>
                 <th className="py-3 px-4">Email</th>
                 <th className="py-3 px-4">نوع المستخدم</th> {/* جديد */}

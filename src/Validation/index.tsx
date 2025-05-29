@@ -13,6 +13,10 @@ export const Rgester = yup
       .string()
       .required("email is requaierd")
       .matches(/^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/, "email not valid"),
+      userType: yup
+      .mixed<"عميل" | "تاجر" | "صاحب مصنع">()
+      .oneOf(["عميل", "تاجر", "صاحب مصنع"],)
+      .required("من فضلك اختر نوع المستخدم"),
   })
   .required();
 
@@ -27,9 +31,6 @@ export const Loginscema = yup
       .required("email is requaierd")
       .matches(/^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/, "email not valid"),
 
-    userType: yup
-      .mixed<"عميل" | "تاجر" | "صاحب مصنع">()
-      .oneOf(["عميل", "تاجر", "صاحب مصنع"],)
-      .required("من فضلك اختر نوع المستخدم"),
+    
   })
   .required();
