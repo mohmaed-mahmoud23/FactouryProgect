@@ -1,10 +1,7 @@
 import * as yup from "yup";
 export const Rgester = yup
   .object({
-    firstName: yup
-      .string()
-      .required("user name requierd")
-      .min(5, "user name min 5"),
+    name: yup.string().required("user name requierd").min(5, "user name min 5"),
     password: yup
       .string()
       .required("passwors is requaierd")
@@ -13,9 +10,9 @@ export const Rgester = yup
       .string()
       .required("email is requaierd")
       .matches(/^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/, "email not valid"),
-      userType: yup
+    userType: yup
       .mixed<"عميل" | "تاجر" | "صاحب مصنع">()
-      .oneOf(["عميل", "تاجر", "صاحب مصنع"],)
+      .oneOf(["عميل", "تاجر", "صاحب مصنع"])
       .required("من فضلك اختر نوع المستخدم"),
   })
   .required();
@@ -30,7 +27,5 @@ export const Loginscema = yup
       .string()
       .required("email is requaierd")
       .matches(/^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/, "email not valid"),
-
-    
   })
   .required();

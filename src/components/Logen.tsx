@@ -53,7 +53,7 @@ const Logen = () => {
       </div>
 
       {/* Submit */}
-      <button 
+      <button
         type="submit"
         className="w-full border-2 px-2 py-2 border-indigo-400 hover:text-white bg-transparent text-black hover:border-transparent hover:bg-gray-800 dark:text-gray-800 dark:hover:text-white"
       >

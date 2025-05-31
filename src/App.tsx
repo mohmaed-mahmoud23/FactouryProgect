@@ -2,6 +2,7 @@
 // import Connter from "./pages/Connter";
 import { RouterProvider } from "react-router-dom";
 import router from "./Router";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
   return (
@@ -10,6 +11,8 @@ const App = () => {
 
       {/* <Login /> */}
       {/* <Connter /> */}
+
+      <Toaster />
     </div>
   );
 };
